@@ -94,6 +94,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Pdh.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -126,6 +127,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Pdh.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,12 +149,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Base.h" />
+    <ClInclude Include="ComputerInfo.h" />
+    <ClInclude Include="Converting.h" />
+    <ClInclude Include="CpuInfo.h" />
+    <ClInclude Include="DriverInfo.h" />
+    <ClInclude Include="Graph.h" />
+    <ClInclude Include="ProcInfo.h" />
+    <ClInclude Include="RamInfo.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceMonitor.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="VirtmemInfo.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ComputerInfo.cpp" />
+    <ClCompile Include="Converting.cpp" />
+    <ClCompile Include="CpuInfo.cpp" />
+    <ClCompile Include="DriverInfo.cpp" />
+    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="ProcInfo.cpp" />
+    <ClCompile Include="RamInfo.cpp" />
     <ClCompile Include="ResourceMonitor.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -160,6 +178,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="VirtmemInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="ResourceMonitor.ico" />
@@ -167,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ResourceMonitor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource.hm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
