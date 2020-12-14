@@ -11,7 +11,7 @@ void initCPU(MEMORYSTATUSEX &memInfo, PDH_HQUERY &cpuQuery, PDH_HCOUNTER &cpuTot
 	PdhCollectQueryData(cpuQuery);
 }
 
-void countCPU(HWND hWnd, HWND hDlg, PDH_HQUERY &cpuQuery, PDH_HCOUNTER &cpuTotal,int edit)
+int countCPU(HWND hWnd, HWND hDlg, PDH_HQUERY &cpuQuery, PDH_HCOUNTER &cpuTotal,int edit)
 {
 	double CPUUsage;
 	PDH_FMT_COUNTERVALUE counterVal;
@@ -24,4 +24,6 @@ void countCPU(HWND hWnd, HWND hDlg, PDH_HQUERY &cpuQuery, PDH_HCOUNTER &cpuTotal
 	DrawGraph(hDlg, CPUUsage, 230, 230, 247, 257);
 	sprintf(buff, "%3.0f%%", CPUUsage);
 	SendMessage(GetDlgItem(hWnd, edit), WM_SETTEXT, NULL, (LPARAM)buff);
+
+	return CPUUsage;
 }

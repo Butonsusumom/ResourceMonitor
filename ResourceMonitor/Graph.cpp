@@ -16,3 +16,12 @@ void DrawGraph(HWND hWnd, int percent, int X1, int Y1, int X2, int Y2) //graw pe
 
 	ReleaseDC(hWnd, hdc);
 }
+
+void DrawRect(HWND hWnd, int x1, int y1, int x2, int y2, COLORREF back)
+{
+	HDC hdc = GetDC(hWnd); // Get DC
+	RECT Rec = { x1, y1, x2, y2 };
+	HBRUSH hbrush = CreateSolidBrush(back);
+	FillRect(hdc, &Rec, hbrush);
+	ReleaseDC(hWnd, hdc);
+}

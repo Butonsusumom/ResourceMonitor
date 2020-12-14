@@ -3,4 +3,4 @@
 
 void initCPU(MEMORYSTATUSEX &memInfo, PDH_HQUERY &cpuQuery, PDH_HCOUNTER &cpuTotal);
 
-void countCPU(HWND hWnd, HWND hDlg, PDH_HQUERY &cpuQuery, PDH_HCOUNTER &cpuTotal, int edit);
+int countCPU(HWND hWnd, HWND hDlg, PDH_HQUERY &cpuQuery, PDH_HCOUNTER &cpuTotal, int edit);

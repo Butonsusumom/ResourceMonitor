@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ResourceMonitor", "ResourceMonitor\ResourceMonitor.vcxproj", "{E0D40175-4B06-4B2D-8273-AC54672E81C8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawGraphicDLL", "GrawGraphicDLL\GrawGraphicDLL.vcxproj", "{1C40F9C3-065A-48A8-94E0-14FA38796A68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{E0D40175-4B06-4B2D-8273-AC54672E81C8}.Release|x64.Build.0 = Release|x64
 		{E0D40175-4B06-4B2D-8273-AC54672E81C8}.Release|x86.ActiveCfg = Release|Win32
 		{E0D40175-4B06-4B2D-8273-AC54672E81C8}.Release|x86.Build.0 = Release|Win32
+		{1C40F9C3-065A-48A8-94E0-14FA38796A68}.Debug|x64.ActiveCfg = Debug|x64
+		{1C40F9C3-065A-48A8-94E0-14FA38796A68}.Debug|x64.Build.0 = Debug|x64
+		{1C40F9C3-065A-48A8-94E0-14FA38796A68}.Debug|x86.ActiveCfg = Debug|Win32
+		{1C40F9C3-065A-48A8-94E0-14FA38796A68}.Debug|x86.Build.0 = Debug|Win32
+		{1C40F9C3-065A-48A8-94E0-14FA38796A68}.Release|x64.ActiveCfg = Release|x64
+		{1C40F9C3-065A-48A8-94E0-14FA38796A68}.Release|x64.Build.0 = Release|x64
+		{1C40F9C3-065A-48A8-94E0-14FA38796A68}.Release|x86.ActiveCfg = Release|Win32
+		{1C40F9C3-065A-48A8-94E0-14FA38796A68}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

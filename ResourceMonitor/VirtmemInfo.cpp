@@ -4,7 +4,7 @@
 #include "Converting.h"
 
 #pragma warning(disable:4996)
-void countVirtmem(HWND hWnd, HWND hDlg, MEMORYSTATUSEX memInfo, int totalEdit, int availableEdit, int usageEdit, int percentEdit)
+int countVirtmem(HWND hWnd, HWND hDlg, MEMORYSTATUSEX memInfo, int totalEdit, int availableEdit, int usageEdit, int percentEdit)
 {
 	int totalVirtualMem;
 	int availableVirtualMem;
@@ -22,4 +22,6 @@ void countVirtmem(HWND hWnd, HWND hDlg, MEMORYSTATUSEX memInfo, int totalEdit, i
 	DrawGraph(hDlg, percent, 230, 187, 247, 210);
 	sprintf(buff, "%i%%", percent);
 	SendMessage(GetDlgItem(hWnd, IDC_EDIT28), WM_SETTEXT, NULL, (LPARAM)buff);
+
+	return percent;
 }

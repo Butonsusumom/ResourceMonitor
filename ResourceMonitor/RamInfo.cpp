@@ -4,7 +4,7 @@
 #include "Graph.h"
 
 #pragma warning(disable:4996)
-void countRam(HWND hWnd, HWND hDlg ,MEMORYSTATUSEX memInfo, int totalEdit, int availableEdit, int usageEdit, int percentEdit)
+int countRam(HWND hWnd, HWND hDlg ,MEMORYSTATUSEX memInfo, int totalEdit, int availableEdit, int usageEdit, int percentEdit)
 {
 	int totalRAM;
 	int availableRAM;
@@ -22,4 +22,6 @@ void countRam(HWND hWnd, HWND hDlg ,MEMORYSTATUSEX memInfo, int totalEdit, int a
 	DrawGraph(hDlg, percent, 230, 100, 247, 123);
 	sprintf(buff, "%i%%", percent);
 	SendMessage(GetDlgItem(hWnd, percentEdit), WM_SETTEXT, NULL, (LPARAM)buff);
+
+	return percent;
 }
