@@ -21,7 +21,7 @@ void DrawRect(HWND hWnd, int x1, int y1, int x2, int y2, COLORREF back)
 {
 	HDC hdc = GetDC(hWnd); // Get DC
 	RECT Rec = { x1, y1, x2, y2 };
-	HBRUSH hbrush = CreateSolidBrush(back);
+	HBRUSH hbrush = CreateSolidBrush(RGB(255, 255, 255));
 	FillRect(hdc, &Rec, hbrush);
 	ReleaseDC(hWnd, hdc);
 }
