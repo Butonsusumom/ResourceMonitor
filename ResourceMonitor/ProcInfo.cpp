@@ -39,6 +39,7 @@ void getProcInfo(HWND hWnd, int list, int editProc, int editThred)
 		sprintf(buf, "%i", pi.ThreadCount);
 		SendMessage(GetDlgItem(hWnd, editThred), WM_SETTEXT, NULL, (LPARAM)buf);
 	}
+
 }
 
 void PrintMemoryInfo(HWND hWnd, DWORD processID)// print process information
